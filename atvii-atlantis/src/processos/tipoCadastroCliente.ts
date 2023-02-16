@@ -15,6 +15,7 @@ export default class TipoCadastroCliente extends Processo {
             case 1:
                 this.processo = new CadastroClienteTitular()
                 this.processo.processar()
+                
                 break
             case 2:
                 this.processo = new CadastroClienteTitular()

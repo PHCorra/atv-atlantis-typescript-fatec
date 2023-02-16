@@ -21,6 +21,7 @@ export default class CadastroClienteTitular extends Processo {
 
         let armazem = Armazem.InstanciaUnica
         armazem.Clientes.push(cliente)
+        console.log(armazem);
 
         var dependenteIsTrue = this.entrada.receberTexto('Deseja cadastrar um novo dependente? s/n')
         while(dependenteIsTrue.toLowerCase() === 's' || dependenteIsTrue.toLowerCase() === 'sim') {
