@@ -30,6 +30,7 @@ export default class CadastroClienteTitular extends Processo {
             let nomeSocial = this.entrada.receberTexto('Qual o nome social do novo cliente?')
             let dataNascimento = this.entrada.receberData('Qual a data de nascimento?')
             let dependente = new Cliente(nome, nomeSocial, dataNascimento);
+            dependente.Endereco = cliente.Endereco;
             cliente.Dependente = dependente
             var dependenteIsTrue = this.entrada.receberTexto('Deseja cadastrar um novo dependente? s/n')
         }

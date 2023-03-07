@@ -20,7 +20,15 @@ export default class CadastroClienteDependente extends Processo {
 
         let armazem = Armazem.InstanciaUnica
 
-        for(titular in armazem)
+        armazem.Clientes.forEach(client => {
+            if(client.Nome.toLowerCase() === titular.toLowerCase()) {
+                dependente.Titular = client;
+                client.Dependentes.push(dependente);
+            } else {
+                console.log()
+            }
+        })
+        
         
 
         console.log('Finalizando o cadastro do dependente...')
