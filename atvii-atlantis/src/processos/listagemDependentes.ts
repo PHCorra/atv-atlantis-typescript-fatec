@@ -17,9 +17,11 @@ export default class ListagemDependentes extends Processo {
         console.log('Iniciando a listagem dos clientes dependentes...')
         this.clientes.forEach(cliente => {
             if (cliente.Nome.toLowerCase() === titular.toLowerCase()) {
-                cliente.Dependentes.forEach(dependente => {this.impressor = new ImpressaorCliente(dependente)})
-                console.log(this.impressor.imprimir())
-            }
+                cliente.Dependentes.forEach(dependente => {
+                    this.impressor = new ImpressaorCliente(dependente)
+                    console.log(this.impressor.imprimir())
+                })
+            } 
         })
     }
 
